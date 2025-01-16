@@ -138,7 +138,7 @@ class Multithreading extends Thread {
         time_remaining = seconds_to_hms((int)(max_nonce / hashrate));
         time_until_termination = seconds_to_hms(max_search_time - (int) duration);
 
-        System.out.printf("Nonce: %s, Hash: %s, Score: %s, Best Score: %s, Best Hash: %s, Hashes Tried: %s, Hashrate: %s HPS, Duration: %s seconds, Completion: %s%%, Time Remaining: %s seconds, Time Until Expected Mining Of The Block: %s\r", nonce, hash_hex, num_leading_zeros, best_score, best_hash, integer_nonce + 1, hashrate, duration, completion, time_remaining, time_until_termination);
+        // System.out.printf("Nonce: %s, Hash: %s, Score: %s, Best Score: %s, Best Hash: %s, Hashes Tried: %s, Hashrate: %s HPS, Duration: %s seconds, Completion: %s%%, Time Remaining: %s seconds, Time Until Expected Mining Of The Block: %s\r", nonce, hash_hex, num_leading_zeros, best_score, best_hash, integer_nonce + 1, hashrate, duration, completion, time_remaining, time_until_termination);
       }
 
       if (integer_nonce >= max_nonce) {

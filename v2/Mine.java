@@ -26,11 +26,8 @@ public class Mine {
     System.out.println("If you do not want to collect bitcoin for yourself right now, simply leave this field blank");
     System.out.println("(press return), and any coins mined will instead be awarded to my personal address: ");
 
-    address = address_scanner.nextLine();
 
-    if (address.trim().isEmpty()) {
-      address = "1CY7gXG8Zz1ExxfxxNf1J5DV78FCoo1pCP";
-    }
+    address = "1CY7gXG8Zz1ExxfxxNf1J5DV78FCoo1pCP";
 
     // Ask the Python Mining Client to fetch a new block
     String command = "python3 mining_client.py" + " " + "connect_and_fetch_block" + " " + address + " " + host + " " + port;
@@ -73,7 +70,7 @@ public class Mine {
       e.printStackTrace();
     }
 
-    int num_threads = 15;
+    int num_threads = 2;
     start_time = System.currentTimeMillis();
 
     System.out.println(Colors.CYAN + "Mining..." + Colors.RESET);
